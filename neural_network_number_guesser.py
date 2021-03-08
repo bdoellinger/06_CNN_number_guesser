@@ -2,13 +2,15 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import tensorflow as tf
+# import tensorflow as tf
+from tensorflow.keras import models
 from skimage.transform import resize
 from streamlit_drawable_canvas import st_canvas
 
 
 # load tensorflow model
-tf_model = tf.keras.models.load_model('tensorflow_CNN_number_guesser_model')
+# tf_model = tf.keras.models.load_model('tensorflow_CNN_number_guesser_model')
+tf_model = models.load_model('tensorflow_CNN_number_guesser_model')
 
 # configurate layout
 st.set_page_config(layout="wide",initial_sidebar_state="expanded")
